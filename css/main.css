@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz@0,6..12;1,6..12&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.05em;
+}
+
+body{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 1fr auto; 
+    min-height: 100vh;
+    background-color: #E6DEC7;
+}
+
+
+/* Estilos del encabezado */
+
+.header {
+    background-color: #287271;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    width: 100%;
+    padding: 5px 10%;
+    position: fixed;
+    z-index: 1000; 
+}
+
+.header .logo {
+    cursor: pointer;
+}
+
+.header .logo img {
+    height: 70px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.header .logo img:hover {
+    transform: scale(1.1);
+}
+
+.toggle_btn {
+    color: #E6DEC7;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn {
+    background-color: #E6DEC7;
+    color: #B36D31;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.action_btn:hover {
+    transform: scale(1.05);
+    color: #B36D31;
+}
+
+.action_btn:active {
+    transform: scale(0.95);
+}
+
+.header .nav_links {
+    list-style: none;
+}
+
+.header .nav_links li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.header .nav_links li:hover {
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+.header .nav_links a {
+    font-weight: 700;
+    color: #E6DEC7;
+    text-decoration: none;
+}
+
+.header .nav_links li a:hover {
+    color: #D1A246;
+}
+
+  /* Estilos para el banner */
+.banner {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/banner.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title_banner {
+    font-size: 3em;
+    color: #e4f1df;
+}
+
+.strong_fotoprint {
+    color: #287271;
+    font-size: 1em;
+}
+
+.strong_fotoprint:hover {
+    transition: all 0.9s;
+    font-size: 1.2em;
+}
+
+.btn_banner {
+    background-color: #B36D31;
+    text-decoration: none;
+    padding: 1em 4em;
+    color: #E6DEC7;
+    border-radius: 1em;
+    margin: 1em 0;
+}
+
+
+.btn_banner:hover {
+    color: #B36D31;
+    background-color: #E6DEC7;
+    transition: all 0.4s;
+}
+
+/* Estilos para el dropdown menu */
+
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+    height: auto;
+}
+
+.dropdown_menu li {
+    list-style: none;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.dropdown_menu li a {
+    color: #287271;
+    text-decoration: none;
+}
+
+.dropdown_menu li a:hover {
+    color: #D1A246;
+}
+
+@media (max-width: 768px) {
+    .toggle_btn {
+    display: block;
+    }
+
+    .nav_links {
+    display: none;
+    }
+
+    .dropdown_menu {
+    display: flex;
+    flex-direction: column;
+    }
+}
+
+
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/banner.jpg);
+    background-position: center;
+    background-repeat:no-repeat ;
+    background-size: cover;
+}
+
+.title_banner{
+    font-size: 3em;
+    color: #e4f1df;
+}
+
+.strong_fotoprint{
+    color: #287271;
+    font-size: 1em;
+}
+
+.strong_fotoprint:hover{
+    transition: all 0.9s;
+    font-size: 1.2em;
+
+}
+
+.btn_banner{
+    background-color: #B36D31 ;
+    text-decoration: none;
+    padding: 1em 4em;
+    color: #E6DEC7 ;
+    border-radius: 1em;
+    margin: 1em 0;
+}
+
+.btn_banner:hover{
+    color: #B36D31;
+    background-color: #E6DEC7;
+    transition: all 0.4s;
+}
+
+/*drop downmenu*/
+
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: heigth 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+    height: 240px;
+
+}
+
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+/*Nav responsive*/
+
+@media (max-width: 992px) {
+    .nav_links,
+    .nav_bar .action_btn{
+        display: none;
+    }
+
+    .nav_bar .togle_bar{
+        display: block;
+    }
+
+    .dropdown_menu{
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+    
+}
+
+/*footer */
+
+.footer{
+    background-color: #287271;
+}
+
+.link_footer{
+    display: flex;
+    flex-direction: column;
+    margin: .6em;
+    align-items: center;
+}
+
+.footer_content {
+    display: flex;
+    justify-content: center;
+    color: #E6DEC7;
+    text-decoration: none;
+}
+
+.bi{
+    color: #e4f1df ;
+}
+
+.txt_footer{
+    color: #7B7B7B;
+    text-decoration: none;
+}
+
+.txt_footer:hover{
+    color: #ffff;
+    transition: all 0.4s;
+    transform: scale(1.2);
+}
+
+/*Contact*/
+
+.container_contact_div { 
+    height: 80vh;
+    margin-top: 2.4em;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-rows: repeat(5, 1fr) 1.5fr 1fr;
+    gap: 1em;
+    grid-template-areas: 
+        " . titulo ."  
+        " . nombre ."  
+        " . gmail  ."   
+        " . asunto ."  
+        " . mensaje ." 
+        " . submit ."    ;
+        background-image: url(../img/dark-blue-backdrop-with-rectangles-modern-design-with-rectangles-in-abstract-style-pattern-for-websites-landing-pages-.jpg); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        
+    
+}
+
+
+.container_contact_div > .titulo {
+    color: #baac82;
+    margin: 1em;
+    justify-self: center;
+    grid-area: titulo;
+}
+
+.container_contact_div > .form_control{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    padding: 0 10px;
+    background: rgba(255 255 255 /.1);
+    border: 3px solid transparent;
+    letter-spacing: 1px;
+    transition: .3s;
+    color: #ffff;
+}
+
+.container_contact_div > textarea{
+    width: 100%;
+    height: 130px;
+    background: rgba(255 255 255 /.1);
+    border: 3px solid transparent;
+    letter-spacing: 1px;
+    transition: .3s;
+    color: #ffff;
+    padding: 10px;
+}
+
+.container_contact_div > input::placeholder,
+.container_contact_div >textarea::placeholder{
+    color: #7b7d7d;
+}
+
+.container_contact_div >  input:hover,
+.container_contact_div > textarea:hover{ 
+    border-bottom: 3px solid #287271;
+    animation: shake .2s;
+}
+
+.container_contact_div >input:hover::placeholder,
+.container_contact_div >textarea:hover::placeholder{
+    color: transparent;
+}
+
+.container_contact_div > .txt_form {
+    
+    grid-area: nombre;
+}
+
+.container_contact_div > .email_form {
+    grid-area: gmail;
+}
+
+.container_contact_div > .asunto_form {
+    grid-area: asunto;
+}
+
+.container_contact_div > .msj_form {
+    grid-area: mensaje;
+}
+
+.container_contact_div > .submit_btn {
+    grid-area: submit;
+    background: #287271;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.container_contact_div > .submit_btn:hover {
+    background: #143837;
+}
+
+
+/*Servicios */
+
+.card{
+    margin: 18px;
+    border-radius: 14px;
+    box-shadow: 1px 2px 6px 4px rgba(0,0,0,0.49);
+    -webkit-box-shadow: 1px 2px 6px 4px rgba(0,0,0,0.49);
+    -moz-box-shadow: 1px 2px 6px 4px rgba(0,0,0,0.49);
+}
+
+.card-img-top{
+    padding: 1rem;
+}
+
+.card-title{
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #287271;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.card-text{
+    font-size: 1rem;
+}
+
+
+/*responsive servicios*/
+
+@media (max-width: 992px) {
+    .col-md-4 {
+        flex: 0 0 50%; 
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+
+.col-md-4 {
+        flex: 0 0 100%; 
+        max-width: 100%; 
+
+}
+
+img {
+        max-width: 100%; 
+        height: auto; 
+    }
+}
+
+
+
+
+

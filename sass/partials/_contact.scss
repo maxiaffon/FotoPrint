@@ -1,0 +1,102 @@
+.contac_section{
+    .container_contact_div { 
+        height: 80vh;
+        margin-top: 2.4em;
+        display: grid;
+        grid-template-columns: 1fr 1.5fr 1fr;
+        grid-template-rows: repeat(5, 1fr) 1.5fr 1fr;
+        gap: 1em;
+        grid-template-areas: 
+            " . titulo ."  
+            " . nombre ."  
+            " . gmail  ."   
+            " . asunto ."  
+            " . mensaje ." 
+            " . submit ."    ;
+            background-image: url(../../img/banner.jpg); 
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            
+            .titulo {
+                color: $secondcolor;
+                margin: 1em;
+                justify-self: center;
+                grid-area: titulo;
+            }
+            .form_control{
+                width: 100%;
+                height: 40px;
+                outline: none;
+                padding: 0 10px;
+                background: rgba(255 255 255 /.1);
+                border: 3px solid transparent;
+                letter-spacing: 1px;
+                transition: .3s;
+                color: #ffff;
+            }
+            textarea{
+                width: 100%;
+                height: 130px;
+                background: rgba(255 255 255 /.1);
+                border: 3px solid transparent;
+                letter-spacing: 1px;
+                transition: .3s;
+                color: #ffff;
+                padding: 10px;
+
+                &::placeholder{
+                    color: #e7ffff;
+                }
+                &:hover{ 
+                    border-bottom: 3px solid $maincolor;
+                    animation: shake .2s;
+                    
+                    &::placeholder{
+                        color: transparent;
+                    }
+                }
+            }
+            input{
+                &::placeholder{
+                    color: #e7ffff;
+                }
+
+                &:hover{ 
+                    border-bottom: 3px solid $maincolor;
+                    animation: shake .2s;
+
+                    &::placeholder{
+                        color: transparent;
+                    }
+                }
+            }
+            .txt_form {
+    
+                grid-area: nombre;
+            }
+            .email_form {
+                grid-area: gmail;
+            }
+            .asunto_form {
+                grid-area: asunto;
+            }
+            .msj_form {
+                grid-area: mensaje;
+            }
+            .submit_btn {
+                grid-area: submit;
+                background: $maincolor;
+                border: none;
+                cursor: pointer;
+                padding: 10px;
+                font-size: 1rem;
+
+                &:hover {
+                    background: #143837;
+                }
+            }
+
+    }
+}

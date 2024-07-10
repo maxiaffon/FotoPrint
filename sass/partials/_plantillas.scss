@@ -1,0 +1,79 @@
+.plantillas{
+    
+    h2 {
+        text-align: center;
+        margin-top: 75px;
+        font-size: 34px;
+        color: $maincolor;
+    }
+    
+    .slider {
+        position: relative;
+        max-width: 800px;
+        margin: auto;
+        overflow: hidden;
+    }
+    
+    .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    .slide {
+        min-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .slide   img {
+        width: 100%; 
+        height: auto; 
+        max-width: 400px; 
+        max-height: 600px; 
+        display: block;
+        margin: auto; 
+        margin-bottom: 35px;
+        object-fit: contain; 
+    }
+    
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 0.623);
+        color: rgb(0, 0, 0);
+        border: none;
+        padding: 1rem;
+        cursor: pointer;
+    }
+    
+    .prev {
+        left: 0;
+    }
+    
+    .next {
+        right: 0;
+    }
+    
+    .subtitle_plantillas{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $maincolor;
+    }
+    
+    .list_plantilla{
+        font-size: 19px;
+        margin: 20px;
+        list-style: circle;
+    
+        span{
+            color: #156d48;
+            font-weight: bold;
+        }
+    }
+    
+    .txt_plantillas{
+        margin: 20px;
+    }
+}
