@@ -242,7 +242,7 @@ body {
   border: 3px solid transparent;
   letter-spacing: 1px;
   transition: 0.3s;
-  color: white;
+  color: #287271;
 }
 .contac_section .container_contact_div textarea {
   width: 100%;
@@ -251,14 +251,14 @@ body {
   border: 3px solid transparent;
   letter-spacing: 1px;
   transition: 0.3s;
-  color: white;
+  color: #287271;
   padding: 10px;
 }
 .contac_section .container_contact_div textarea::-moz-placeholder {
-  color: #e7ffff;
+  color: #ffffff;
 }
 .contac_section .container_contact_div textarea::placeholder {
-  color: #e7ffff;
+  color: #ffffff;
 }
 .contac_section .container_contact_div textarea:hover {
   border-bottom: 3px solid #287271;

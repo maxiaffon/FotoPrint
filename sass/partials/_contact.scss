@@ -34,7 +34,7 @@
                 border: 3px solid transparent;
                 letter-spacing: 1px;
                 transition: .3s;
-                color: #ffff;
+                color: $maincolor
             }
             textarea{
                 width: 100%;
@@ -43,11 +43,11 @@
                 border: 3px solid transparent;
                 letter-spacing: 1px;
                 transition: .3s;
-                color: #ffff;
+                color: $maincolor;
                 padding: 10px;
 
                 &::placeholder{
-                    color: #e7ffff;
+                    color: #ffffff;
                 }
                 &:hover{ 
                     border-bottom: 3px solid $maincolor;
